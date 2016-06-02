@@ -9,7 +9,7 @@ public abstract class Mecanismo
 {
     // instance variables - replace the example below with your own
     private int num;
-
+    
     /**
      * Constructor for objects of class Mecanismo
      */
@@ -30,3 +30,4 @@ public abstract class Mecanismo
         return num;
     }
 }
+
