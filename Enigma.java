@@ -27,22 +27,17 @@ public class Enigma
     /**
      * Metodo para encriptar el número utilizando el mecanismo pasado como parámetro
      */
-    public int encripta(Mecanismo mecanismo, int num) {
-        int numDevuelve = -1;
-        if (num > 10) {
-            numDevuelve = mecanismo.encripta(num);
-        }
-        return numDevuelve;
+    public int encripta(Mecanismo mecanismo, int num) 
+    {
+        return (num > 10) ? mecanismo.encripta(num) : -1;
     }
     
     /**
      * Metodo para desencriptar el número utilizando el mecanismo pasado como parámetro
      */
-    public int desencripta(Mecanismo mecanismo, int num) {
+    public int desencripta(Mecanismo mecanismo, int num) 
+    {
         int numDevuelve = mecanismo.desencripta(num); 
-        if (numDevuelve <= 10) {
-            numDevuelve = -1;
-        }
-        return numDevuelve;
+        return (numDevuelve <= 10) ? -1 : numDevuelve;
     }
 }

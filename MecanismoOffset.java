@@ -6,10 +6,9 @@
  * @version (a version number or a date)
  */
 public class MecanismoOffset extends Mecanismo
-{
-    
+{    
     /**
-     * Constructor for objects of class MecanismoMultiplicacionPrimo
+     * Constructor for objects of class MecanismoOffset
      */
     public MecanismoOffset(int num)
     {
@@ -27,10 +26,9 @@ public class MecanismoOffset extends Mecanismo
     public int encripta(int numero)
     {
         String numeroString = Integer.toString(numero);
-        int cantidadNumeros = numeroString.length();
         String numeros = "" + numeroString.charAt(0);
         int digito = 0;
-        for (int i = 1; i < cantidadNumeros; i++) {
+        for (int i = 1; i < numeroString.length(); i++) {
             digito = Integer.parseInt("" + numeroString.charAt(i));
             digito = (digito + getNum()) % 10;
             numeros += Integer.toString(digito);
@@ -46,10 +44,9 @@ public class MecanismoOffset extends Mecanismo
     public int desencripta(int numero)
     {
         String numeroString = Integer.toString(numero);
-        int cantidadNumeros = numeroString.length();
         String numeros = "" + numeroString.charAt(0);
         int digito = 0;
-        for (int i = 1; i < cantidadNumeros; i++) {
+        for (int i = 1; i < numeroString.length(); i++) {
             digito = Integer.parseInt("" + numeroString.charAt(i));
             digito = (digito - getNum() + 10) % 10;
             numeros += Integer.toString(digito);
